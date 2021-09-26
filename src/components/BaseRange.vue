@@ -1,8 +1,18 @@
 <template>
-  <input type="range" />
+  <input type="range" :style="{ '--range-width': rangeWidth }" />
 </template>
 
-<script></script>
+<script>
+export default {
+  props: {
+    rangeWidth: {
+      type: String,
+      required: false,
+      default: "100%",
+    },
+  },
+};
+</script>
 
 <style scoped>
 input[type="range"] {
@@ -10,7 +20,7 @@ input[type="range"] {
   -webkit-appearance: none;
   margin: 0;
   height: 19px;
-  width: 100%;
+  width: var(--range-width);
 }
 input[type="range"]::-webkit-slider-runnable-track {
   width: 100%;
