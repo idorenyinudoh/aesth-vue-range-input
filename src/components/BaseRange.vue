@@ -4,7 +4,10 @@
     ref="range"
     @input="updateWebkitProgress"
     :max="max"
-    :style="{ '--range-width': rangeWidth }"
+    :style="{
+      '--range-width': rangeWidth,
+      '--thumb-border-radius': squaredThumb ? '0' : '50%',
+    }"
   />
 </template>
 
@@ -15,6 +18,11 @@ export default {
       type: String,
       required: false,
       default: "100%",
+    },
+    squaredThumb: {
+      type: Boolean,
+      required: false,
+      default: false,
     },
     max: {
       type: Number,
@@ -70,7 +78,7 @@ input[type="range"]::-webkit-slider-thumb {
   border: 1px solid #007db5;
   height: 15px;
   width: 15px;
-  border-radius: 50%;
+  border-radius: var(--thumb-border-radius);
   background-color: #fff;
   cursor: pointer;
   margin: -7px 0 0 0;
@@ -101,7 +109,7 @@ input[type="range"]::-moz-range-thumb {
   border: 1px solid #007db5;
   height: 15px;
   width: 15px;
-  border-radius: 50%;
+  border-radius: var(--thumb-border-radius);
   background-color: #fff;
   cursor: pointer;
 }
