@@ -1,5 +1,11 @@
 <template>
-  <input type="range" :style="{ '--range-width': rangeWidth }" />
+  <input
+    type="range"
+    ref="range"
+    @input="updateWebkitProgress"
+    :max="max"
+    :style="{ '--range-width': rangeWidth }"
+  />
 </template>
 
 <script>
@@ -10,6 +16,21 @@ export default {
       required: false,
       default: "100%",
     },
+    max: {
+      type: Number,
+      required: false,
+      default: 100,
+    },
+  },
+  methods: {
+    updateWebkitProgress() {
+      const progress =
+        (this.$refs.range.value / this.$refs.range.max) * 100 + "%";
+      this.$refs.range.style.setProperty("--webkit-progress", progress);
+    },
+  },
+  mounted() {
+    this.updateWebkitProgress();
   },
 };
 </script>
@@ -37,7 +58,7 @@ input[type="range"]::before {
   content: "";
   top: 8px;
   left: 0;
-  width: 50%;
+  width: var(--webkit-progress);
   height: 3px;
   background-color: #007db5;
   cursor: pointer;
