@@ -7,6 +7,7 @@
     :style="{
       '--range-width': rangeWidth,
       '--thumb-border-radius': squaredThumb ? '0' : '50%',
+      '--thumb-size': thumbSize,
     }"
   />
 </template>
@@ -23,6 +24,11 @@ export default {
       type: Boolean,
       required: false,
       default: false,
+    },
+    thumbSize: {
+      type: String,
+      required: false,
+      default: "20px",
     },
     max: {
       type: Number,
@@ -76,12 +82,12 @@ input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   box-sizing: content-box;
   border: 1px solid #007db5;
-  height: 15px;
-  width: 15px;
+  height: var(--thumb-size);
+  width: var(--thumb-size);
   border-radius: var(--thumb-border-radius);
   background-color: #fff;
   cursor: pointer;
-  margin: -7px 0 0 0;
+  margin: calc((var(--thumb-size) / 2) - var(--thumb-size)) 0 0 0;
 }
 input[type="range"]:active::-webkit-slider-thumb {
   transform: scale(1.2);
@@ -107,8 +113,8 @@ input[type="range"]::-moz-focus-outer {
 input[type="range"]::-moz-range-thumb {
   box-sizing: content-box;
   border: 1px solid #007db5;
-  height: 15px;
-  width: 15px;
+  height: var(--thumb-size);
+  width: var(--thumb-size);
   border-radius: var(--thumb-border-radius);
   background-color: #fff;
   cursor: pointer;
