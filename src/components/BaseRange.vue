@@ -8,6 +8,7 @@
       '--range-width': rangeWidth,
       '--progress-color': progressColor,
       '--thumb-border-radius': squaredThumb ? '0' : '50%',
+      '--thumb-border-color': thumbBorderColor,
       '--thumb-size': thumbSize,
     }"
   />
@@ -30,6 +31,11 @@ export default {
       type: Boolean,
       required: false,
       default: false,
+    },
+    thumbBorderColor: {
+      type: String,
+      required: false,
+      default: "#000",
     },
     thumbSize: {
       type: String,
@@ -87,7 +93,7 @@ input[type="range"]::-webkit-slider-thumb {
   position: relative;
   -webkit-appearance: none;
   box-sizing: content-box;
-  border: 1px solid #007db5;
+  border: 1px solid var(--thumb-border-color);
   height: var(--thumb-size);
   width: var(--thumb-size);
   border-radius: var(--thumb-border-radius);
@@ -97,7 +103,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 input[type="range"]:active::-webkit-slider-thumb {
   transform: scale(1.2);
-  background: #007db5;
+  background: var(--thumb-border-color);
 }
 input[type="range"]::-moz-range-track {
   width: 100%;
@@ -118,7 +124,7 @@ input[type="range"]::-moz-focus-outer {
 }
 input[type="range"]::-moz-range-thumb {
   box-sizing: content-box;
-  border: 1px solid #007db5;
+  border: 1px solid var(--thumb-border-color);
   height: var(--thumb-size);
   width: var(--thumb-size);
   border-radius: var(--thumb-border-radius);
@@ -127,6 +133,6 @@ input[type="range"]::-moz-range-thumb {
 }
 input[type="range"]:active::-moz-range-thumb {
   transform: scale(1.2);
-  background: #007db5;
+  background: var(--thumb-border-color);
 }
 </style>
