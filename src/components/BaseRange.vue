@@ -6,6 +6,7 @@
     :max="max"
     :style="{
       '--range-width': rangeWidth,
+      '--progress-color': progressColor,
       '--thumb-border-radius': squaredThumb ? '0' : '50%',
       '--thumb-size': thumbSize,
     }"
@@ -19,6 +20,11 @@ export default {
       type: String,
       required: false,
       default: "100%",
+    },
+    progressColor: {
+      type: String,
+      required: false,
+      default: "#000c",
     },
     squaredThumb: {
       type: Boolean,
@@ -74,7 +80,7 @@ input[type="range"]::before {
   left: 0;
   width: var(--webkit-progress);
   height: 3px;
-  background-color: #007db5;
+  background-color: var(--progress-color);
   cursor: pointer;
 }
 input[type="range"]::-webkit-slider-thumb {
@@ -105,7 +111,7 @@ input[type="range"]::-moz-range-track {
 }
 input[type="range"]::-moz-range-progress {
   height: 3px;
-  background-color: #007db5;
+  background-color: var(--progress-color);
 }
 input[type="range"]::-moz-focus-outer {
   border: 0;
