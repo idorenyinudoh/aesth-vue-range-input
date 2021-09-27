@@ -7,6 +7,9 @@
     :style="{
       '--range-width': rangeWidth,
       '--progress-color': progressColor,
+      '--track-color': buffered
+        ? `linear-gradient(90deg, ${buffered.color} ${buffered.width}, ${trackColor} ${buffered.width})`
+        : trackColor,
       '--thumb-border-radius': squaredThumb ? '0' : '50%',
       '--thumb-border-color': thumbBorderColor,
       '--thumb-size': thumbSize,
@@ -26,6 +29,21 @@ export default {
       type: String,
       required: false,
       default: "#000c",
+    },
+    buffered: {
+      type: Object,
+      required: false,
+      // default: function () {
+      //   return {
+      //     width: "50%",
+      //     color: "#0003",
+      //   };
+      // },
+    },
+    trackColor: {
+      type: String,
+      required: false,
+      default: "#0003",
     },
     squaredThumb: {
       type: Boolean,
@@ -73,11 +91,7 @@ input[type="range"]::-webkit-slider-runnable-track {
   width: 100%;
   height: 3px;
   cursor: pointer;
-  background: linear-gradient(
-    to right,
-    rgba(0, 125, 181, 0.6) 70%,
-    rgba(0, 125, 181, 0.2) 70%
-  );
+  background: var(--track-color);
 }
 input[type="range"]::before {
   position: absolute;
@@ -109,11 +123,7 @@ input[type="range"]::-moz-range-track {
   width: 100%;
   height: 3px;
   cursor: pointer;
-  background: linear-gradient(
-    to right,
-    rgba(0, 125, 181, 0.6) 70%,
-    rgba(0, 125, 181, 0.2) 70%
-  );
+  background: var(--track-color);
 }
 input[type="range"]::-moz-range-progress {
   height: 3px;
