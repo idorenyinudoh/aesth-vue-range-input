@@ -2,8 +2,12 @@
   <input
     type="range"
     ref="range"
-    @input="updateWebkitProgress"
+    @input="
+      updateWebkitProgress();
+      $emit('input', $event.target.value);
+    "
     :max="max"
+    :value="value"
     :style="{
       '--range-width': rangeWidth,
       '--progress-color': progressColor,
@@ -20,6 +24,7 @@
 <script>
 export default {
   props: {
+    value: [String, Number],
     rangeWidth: {
       type: String,
       required: false,
