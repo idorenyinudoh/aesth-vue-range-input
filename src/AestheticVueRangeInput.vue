@@ -21,7 +21,11 @@
 <script>
 export default {
   props: {
-    value: [String, Number],
+    value: {
+      type: Number,
+      required: false,
+      default: 0,
+    },
     rangeWidth: {
       type: String,
       required: false,
