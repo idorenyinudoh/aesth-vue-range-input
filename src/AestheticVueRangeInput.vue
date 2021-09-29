@@ -94,8 +94,12 @@ input[type="range"] {
   position: relative;
   -webkit-appearance: none;
   margin: 0;
+  padding: 5px 0;
   height: 19px;
   width: var(--range-width);
+}
+input:focus-visible {
+  outline: 2px solid var(--progress-color);
 }
 input[type="range"]::-webkit-slider-runnable-track {
   width: 100%;
@@ -106,7 +110,7 @@ input[type="range"]::-webkit-slider-runnable-track {
 input[type="range"]::before {
   position: absolute;
   content: "";
-  top: 8px;
+  top: 13px;
   left: 0;
   width: var(--webkit-progress);
   height: 3px;
