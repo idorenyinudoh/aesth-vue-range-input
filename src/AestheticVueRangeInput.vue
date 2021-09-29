@@ -90,7 +90,7 @@ export default {
 </script>
 
 <style scoped>
-input[type="range"] {
+input {
   position: relative;
   -webkit-appearance: none;
   margin: 0;
@@ -101,13 +101,13 @@ input[type="range"] {
 input:focus-visible {
   outline: 2px solid var(--progress-color);
 }
-input[type="range"]::-webkit-slider-runnable-track {
+input::-webkit-slider-runnable-track {
   width: 100%;
   height: 3px;
   cursor: pointer;
   background: var(--track-color);
 }
-input[type="range"]::before {
+input::before {
   position: absolute;
   content: "";
   top: 13px;
@@ -117,7 +117,7 @@ input[type="range"]::before {
   background-color: var(--progress-color);
   cursor: pointer;
 }
-input[type="range"]::-webkit-slider-thumb {
+input::-webkit-slider-thumb {
   position: relative;
   -webkit-appearance: none;
   box-sizing: content-box;
@@ -129,24 +129,24 @@ input[type="range"]::-webkit-slider-thumb {
   cursor: pointer;
   margin: calc((var(--thumb-size) / 2) - var(--thumb-size)) 0 0 0;
 }
-input[type="range"]:active::-webkit-slider-thumb {
+input:active::-webkit-slider-thumb {
   transform: scale(1.2);
   background: var(--thumb-border-color);
 }
-input[type="range"]::-moz-range-track {
+input::-moz-range-track {
   width: 100%;
   height: 3px;
   cursor: pointer;
   background: var(--track-color);
 }
-input[type="range"]::-moz-range-progress {
+input::-moz-range-progress {
   height: 3px;
   background-color: var(--progress-color);
 }
-input[type="range"]::-moz-focus-outer {
+input::-moz-focus-outer {
   border: 0;
 }
-input[type="range"]::-moz-range-thumb {
+input::-moz-range-thumb {
   box-sizing: content-box;
   border: 1px solid var(--thumb-border-color);
   height: var(--thumb-size);
@@ -155,7 +155,7 @@ input[type="range"]::-moz-range-thumb {
   background-color: #fff;
   cursor: pointer;
 }
-input[type="range"]:active::-moz-range-thumb {
+input:active::-moz-range-thumb {
   transform: scale(1.2);
   background: var(--thumb-border-color);
 }
