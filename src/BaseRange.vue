@@ -2,10 +2,7 @@
   <input
     type="range"
     ref="range"
-    @input="
-      updateWebkitProgress();
-      $emit('input', $event.target.value);
-    "
+    @input="$emit('input', $event.target.value)"
     :max="max"
     :value="value"
     :style="{
@@ -71,15 +68,19 @@ export default {
       default: 100,
     },
   },
-  methods: {
+  computed: {
     updateWebkitProgress() {
-      const progress =
-        (this.$refs.range.value / this.$refs.range.max) * 100 + "%";
-      this.$refs.range.style.setProperty("--webkit-progress", progress);
+      const progress = (this.value / this.max) * 100 + "%";
+      return this.$refs.range.style.setProperty("--webkit-progress", progress);
     },
   },
   mounted() {
-    this.updateWebkitProgress();
+    this.updateWebkitProgress;
+  },
+  watch: {
+    value() {
+      this.updateWebkitProgress;
+    },
   },
 };
 </script>
