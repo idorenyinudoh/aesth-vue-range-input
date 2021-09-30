@@ -3,7 +3,13 @@
   "version": "0.0.1",
   "private": false,
   "description": "a completely customizable and aesthetic vue range input component.",
-  "keywords": ["vue-range-slider", "vue-range-input", "vue-input-range", "vue-input-slider", "aesthetic vue component"],
+  "keywords": [
+    "vue-range-slider",
+    "vue-range-input",
+    "vue-input-range",
+    "vue-input-slider",
+    "aesthetic vue component"
+  ],
   "homepage": "https://github.com/idorenyinudoh/aesthetic-vue-range-input#readme",
   "bugs": {
     "url": "https://github.com/idorenyinudoh/aesthetic-vue-range-input/issues"
@@ -21,9 +27,9 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
-  "dependencies": {
-  },
   "devDependencies": {
+    "@rollup/plugin-buble": "^0.21.3",
+    "@rollup/plugin-commonjs": "^20.0.0",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
@@ -34,6 +40,8 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^6.2.2",
     "prettier": "^2.2.1",
+    "rollup": "^2.57.0",
+    "rollup-plugin-vue": "^6.0.0",
     "vue": "^2.6.11",
     "vue-template-compiler": "^2.6.11"
   }
