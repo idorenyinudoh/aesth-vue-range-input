@@ -1,5 +1,6 @@
 import commonjs from "@rollup/plugin-commonjs";
-import vue from "rollup-plugin-vue";
+import vue from "rollup-plugin-vue2";
+import css from "rollup-plugin-css-only";
 import buble from "@rollup/plugin-buble";
 export default {
   input: "src/wrapper.js",
@@ -8,11 +9,11 @@ export default {
     exports: "named",
   },
   plugins: [
-    commonjs(),
     vue({
-      css: true, // Dynamically inject css as a <style> tag
-      compileTemplate: true, // Explicitly convert template to render function
+      compileTemplate: true,
     }),
-    buble(), // Transpile to ES5
+    css(),
+    commonjs(),
+    buble(),
   ],
 };
