@@ -22,9 +22,18 @@
     "dist/*",
     "src/**/*.vue"
   ],
+  "main": "dist/aesth-vue-range-input.umd.js",
+  "module": "dist/aesth-vue-range-input.esm.js",
+  "unpkg": "dist/aesth-vue-range-input.min.js",
+  "browser": {
+    "./sfc": "src/aesth-vue-range-input.vue"
+  },
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "serve": "vue-cli-service serve dev/main.js",
+    "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/aesth-vue-range-input.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/aesth-vue-range-input.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/aesth-vue-range-input.min.js",
     "lint": "vue-cli-service lint"
   },
   "devDependencies": {
