@@ -1,15 +1,27 @@
 {
-  "name": "aesthetic-vue-range-input",
-  "version": "0.1.0",
-  "private": true,
+  "name": "aesth-vue-range-input",
+  "version": "0.0.1",
+  "private": false,
+  "description": "a completely customizable and aesthetic vue range input component.",
+  "keywords": ["vue-range-slider", "vue-range-input", "vue-input-range", "vue-input-slider", "aesthetic vue component"],
+  "homepage": "https://github.com/idorenyinudoh/aesthetic-vue-range-input#readme",
+  "bugs": {
+    "url": "https://github.com/idorenyinudoh/aesthetic-vue-range-input/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Idorenyin Udoh"
+  },
+  "files": [
+    "dist/*",
+    "src/**/*.vue"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "core-js": "^3.6.5",
-    "vue": "^2.6.11"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -17,10 +29,12 @@
     "@vue/cli-service": "~4.5.0",
     "@vue/eslint-config-prettier": "^6.0.0",
     "babel-eslint": "^10.1.0",
+    "core-js": "^3.6.5",
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^6.2.2",
     "prettier": "^2.2.1",
+    "vue": "^2.6.11",
     "vue-template-compiler": "^2.6.11"
   }
 }
