@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import BaseRange from "./AestheticVueRangeInput.vue";
+import BaseRange from "./AesthVueRangeInput.vue";
 
 export default {
   components: {
