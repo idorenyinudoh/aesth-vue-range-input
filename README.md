@@ -34,3 +34,27 @@ npm install aesth-vue-range-input
 ```
 <script src="https://unpkg.com/aesth-vue-range-input"></script>
 ```
+
+## Usage
+If installed through npm,
+```
+<template>
+  <div id="app">
+    <aesth-vue-range-input v-model.number="value" />
+  </div>
+</template>
+
+<script>
+import AesthVueRangeInput from "aesth-vue-range-input";
+
+export default {
+  data() {
+    return {
+      value: 20,
+    };
+  },
+  components {
+    AesthVueRangeInput,
+  },
+};
+</script>
