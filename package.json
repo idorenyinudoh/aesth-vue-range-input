@@ -2,7 +2,7 @@
   "name": "aesth-vue-range-input",
   "version": "0.0.4",
   "private": false,
-  "description": "a completely customizable and aesthetic vue range input component.",
+  "description": "a completely customizable and aesthetic range input component for vue 2.",
   "keywords": [
     "vue-range-slider",
     "vue-range-input",
