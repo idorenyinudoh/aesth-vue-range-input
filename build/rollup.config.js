@@ -2,6 +2,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import vue from "rollup-plugin-vue2";
 import buble from "@rollup/plugin-buble";
 import postcss from "rollup-plugin-postcss";
+import { terser } from "rollup-plugin-terser";
 export default {
   input: "src/wrapper.js",
   output: {
@@ -15,5 +16,6 @@ export default {
     postcss(),
     commonjs(),
     buble(),
+    terser(),
   ],
 };
