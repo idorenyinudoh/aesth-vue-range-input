@@ -19,28 +19,28 @@ a completely customizable and aesthetic range input component for vue 2.
 ## Installation
 
 ### npm
-```
+```shell
 npm install aesth-vue-range-input
 ```
 
 ### CDN
 
 #### jsDelivr
-```
+```xml
 <script src="https://cdn.jsdelivr.net/npm/aesth-vue-range-input"></script>
 ```
 
 #### UNPKG
-```
+```xml
 <script src="https://unpkg.com/aesth-vue-range-input"></script>
 ```
 
 ## Usage
 If installed through npm,
-```
+```vue
 <template>
   <div id="app">
-    <aesth-vue-range-input v-model.number="value" />
+    <aesth-vue-range-input v-model.number="rangeValue" />
   </div>
 </template>
 
@@ -50,7 +50,7 @@ import AesthVueRangeInput from "aesth-vue-range-input";
 export default {
   data() {
     return {
-      value: 20,
+      rangeValue: 20,
     };
   },
   components {
