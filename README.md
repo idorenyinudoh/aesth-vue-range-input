@@ -90,3 +90,8 @@ If installed through CDN, in your HTML file,
     });
   </script>
 </body>
+```
+
+### Demo
+
+A Demo of the aesth-vue-range-input installed through jsDelivr is available [here](https://codepen.io/idorenyinudoh/pen/KKqLbEy).
