@@ -12,7 +12,7 @@ export default {
     vue({
       compileTemplate: true,
     }),
-    css(),
+    css({ output: "bundle.css" }),
     commonjs(),
     buble(),
   ],
