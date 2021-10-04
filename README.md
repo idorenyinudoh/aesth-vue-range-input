@@ -10,6 +10,14 @@
 
 a completely customizable and aesthetic range input component for vue 2.
 
+## Table of Contents
+1. [Features](#features)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Range Input Components](#range-input-components)
+5. [Props](#props)
+6. [License](#license)
+
 ## Features
 - supports all native range input attributes because it is built on the native HTML range input.
 - completely customizable.
@@ -128,3 +136,7 @@ Here's an implementation with the `buffered` prop:
   }"
 />
 ```
+
+# License
+[MIT](https://opensource.org/licenses/MIT)
+&copy; Idorenyin Udoh
