@@ -36,7 +36,9 @@ npm install aesth-vue-range-input
 ```
 
 ## Usage
+
 If installed through npm,
+
 ```vue
 <template>
   <div id="app">
@@ -58,3 +60,33 @@ export default {
   },
 };
 </script>
+```
+
+If installed through CDN, in your HTML file,
+
+```xml
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <!-- OR -->
+  <script src="https://unpkg.com/vue@2"></script>
+    
+    
+  <script src="https://cdn.jsdelivr.net/npm/aesth-vue-range-input"></script>
+  <!-- OR -->
+  <script src="https://unpkg.com/aesth-vue-range-input"></script>
+</head>
+
+<body>
+  <div id="app">
+    <aesth-vue-range-input v-model.number="rangeValue" />
+  </div>
+  
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        rangeValue: 20,
+      }
+    });
+  </script>
+</body>
