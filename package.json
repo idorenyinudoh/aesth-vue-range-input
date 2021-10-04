@@ -1,6 +1,6 @@
 {
   "name": "aesth-vue-range-input",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "private": false,
   "description": "a completely customizable and aesthetic range input component for vue 2.",
   "keywords": [
