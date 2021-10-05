@@ -1,4 +1,4 @@
-# aesthetic-vue-range-input
+# aesth-vue-range-input
 
 <br>
 <br>
@@ -31,6 +31,11 @@ a completely customizable and aesthetic range input component for vue 2.
 npm install aesth-vue-range-input
 ```
 
+### yarn
+```shell
+yarn add aesth-vue-range-input
+```
+
 ### CDN
 
 #### jsDelivr
@@ -45,7 +50,7 @@ npm install aesth-vue-range-input
 
 ## Usage
 
-If installed through npm,
+If installed through npm or yarn,
 
 ```vue
 <template>
