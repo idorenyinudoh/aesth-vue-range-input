@@ -2,7 +2,7 @@
   "name": "aesth-vue-range-input",
   "version": "0.0.6",
   "private": false,
-  "description": "a completely customizable and aesthetic range input component for vue 2.",
+  "description": "a completely customizable and aesthetic range input component for vue.",
   "keywords": [
     "vue-range-slider",
     "vue-range-input",
@@ -10,9 +10,9 @@
     "vue-input-slider",
     "aesthetic vue component"
   ],
-  "homepage": "https://github.com/idorenyinudoh/aesthetic-vue-range-input#readme",
+  "homepage": "https://github.com/idorenyinudoh/aesth-vue-range-input#readme",
   "bugs": {
-    "url": "https://github.com/idorenyinudoh/aesthetic-vue-range-input/issues"
+    "url": "https://github.com/idorenyinudoh/aesth-vue-range-input/issues"
   },
   "license": "MIT",
   "author": {

@@ -8,7 +8,7 @@
 <br>
 <br>
 
-a completely customizable and aesthetic range input component for vue 2.
+a completely customizable and aesthetic range input component for vue.
 
 ## Table of Contents
 1. [Features](#features)
@@ -25,6 +25,8 @@ a completely customizable and aesthetic range input component for vue 2.
 - implements buffered feature (appropriate for media players).
 
 ## Installation
+
+For vue 3, include the `@next` tag like this - `...aesth-vue-range-input@next`
 
 ### npm
 ```shell
@@ -74,6 +76,8 @@ export default {
 };
 </script>
 ```
+
+Include the version number of vue in the value of the script's `src` attribute.
 
 If installed through CDN, in your HTML file,
 
