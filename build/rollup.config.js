@@ -1,5 +1,5 @@
 import commonjs from "@rollup/plugin-commonjs";
-import vue from "rollup-plugin-vue2";
+import vue from "rollup-plugin-vue";
 import buble from "@rollup/plugin-buble";
 import postcss from "rollup-plugin-postcss";
 import { terser } from "rollup-plugin-terser";
@@ -8,14 +8,10 @@ export default {
   output: {
     name: "AesthVueRangeInput",
     exports: "named",
+    globals: {
+      vue: "vue",
+    },
   },
-  plugins: [
-    vue({
-      compileTemplate: true,
-    }),
-    postcss(),
-    commonjs(),
-    buble(),
-    terser(),
-  ],
+  external: ["vue"],
+  plugins: [vue(), postcss(), commonjs(), buble(), terser()],
 };

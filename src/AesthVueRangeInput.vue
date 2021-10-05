@@ -2,9 +2,9 @@
   <input
     type="range"
     ref="range"
-    @input="$emit('input', $event.target.value)"
+    @input="$emit('update:modelValue', $event.target.value)"
     :max="max"
-    :value="value"
+    :value="modelValue"
     :style="{
       '--range-width': rangeWidth,
       '--progress-color': progressColor,
@@ -21,7 +21,7 @@
 <script>
 export default {
   props: {
-    value: {
+    modelValue: {
       type: Number,
       required: false,
       default: 0,
@@ -74,7 +74,7 @@ export default {
   },
   computed: {
     updateWebkitProgress() {
-      const progress = (this.value / this.max) * 100 + "%";
+      const progress = (this.modelValue / this.max) * 100 + "%";
       return this.$refs.range.style.setProperty("--webkit-progress", progress);
     },
   },
@@ -82,7 +82,7 @@ export default {
     this.updateWebkitProgress;
   },
   watch: {
-    value() {
+    modelValue() {
       this.updateWebkitProgress;
     },
   },
