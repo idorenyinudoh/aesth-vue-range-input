@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@rollup/plugin-buble": "^0.21.3",
-    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-commonjs": "^21.0.0",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
